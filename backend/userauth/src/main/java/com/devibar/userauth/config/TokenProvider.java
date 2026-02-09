@@ -1,10 +1,12 @@
-package com.devibar.userauth.security;
+package com.devibar.userauth.config;
 
 import com.devibar.userauth.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
@@ -13,10 +15,21 @@ import java.util.Date;
 @Component
 public class TokenProvider {
 
+    // Inject values from application.properties
+    @Value("${app.jwt.secret}")
+    private String jwtSecret;
 
-    private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+    @Value("${app.jwt.expiration}")
+    private long jwtExpirationDate;
 
-    private final long jwtExpirationDate = 3600000; // 1 Hour
+    private Key key;
+
+    // Initialize the Key object AFTER the properties are injected
+    @PostConstruct
+    public void init() {
+        // Create the key using the secret string from properties
+        this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
+    }
 
     public String createToken(User user) {
         Date now = new Date();
@@ -40,7 +53,6 @@ public class TokenProvider {
         }
     }
 
-    // Helper to get username from token
     public String getUsernameFromToken(String token) {
         Claims claims = Jwts.parserBuilder()
                 .setSigningKey(key)
