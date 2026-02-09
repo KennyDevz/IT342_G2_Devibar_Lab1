@@ -13,9 +13,7 @@
   - [x] Create `AuthService` (Register & Authenticate Logic) 
   - [x] Implement `POST /api/auth/register` Endpoint 
   - [x] Implement `POST /api/auth/login` Endpoint 
-  - [x] Implement `TokenProvider` for JWT Generation 
-
-## IN-PROGRESS
+  - [x] Implement `TokenProvider` for JWT Generation
 - [x] **Backend Security & Finalization**
   - [x] Update `AuthController` to return JWT Token
   - [x] Implement `JwtAuthenticationFilter`
@@ -23,11 +21,14 @@
 - [x] **Backend Features**
   - [x] Implement `GET /api/user/me` (Protected Endpoint)
 
-## TODO
+## IN-PROGRESS
 - [ ] **Frontend (React)**
-  - [ ] Initialize React Project (`/web`)
+  - [x] Initialize React Project (`/web`)
   - [ ] Setup API Service (Axios/Fetch)
   - [ ] Create **Register Page**
   - [ ] Create **Login Page**
   - [ ] Create **Dashboard/Profile Page** (Protected Route)
   - [ ] Implement **Logout Functionality**
+
+## TODO
+
