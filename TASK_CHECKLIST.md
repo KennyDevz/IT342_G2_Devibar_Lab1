@@ -16,15 +16,14 @@
   - [x] Implement `TokenProvider` for JWT Generation 
 
 ## IN-PROGRESS
-- [ ] **Backend Security & Finalization**
-  - [ ] Update `AuthController` to return JWT Token
-  - [ ] Implement `JwtAuthenticationFilter`
-  - [ ] Configure `SecurityConfig` to use JWT Filter
+- [x] **Backend Security & Finalization**
+  - [x] Update `AuthController` to return JWT Token
+  - [x] Implement `JwtAuthenticationFilter`
+  - [x] Configure `SecurityConfig` to use JWT Filter
+- [x] **Backend Features**
+  - [x] Implement `GET /api/user/me` (Protected Endpoint)
 
 ## TODO
-- [ ] **Backend Features**
-  - [ ] Implement `GET /api/user/me` (Protected Endpoint)
-
 - [ ] **Frontend (React)**
   - [ ] Initialize React Project (`/web`)
   - [ ] Setup API Service (Axios/Fetch)
@@ -32,10 +31,3 @@
   - [ ] Create **Login Page**
   - [ ] Create **Dashboard/Profile Page** (Protected Route)
   - [ ] Implement **Logout Functionality**
-
-- [ ] **Documentation**
-  - [ ] Update FRS PDF with ERD
-  - [ ] Update FRS PDF with Web UI Screenshots
-    - [ ] Register Page Screenshot
-    - [ ] Login Page Screenshot
-    - [ ] Dashboard Screenshot
