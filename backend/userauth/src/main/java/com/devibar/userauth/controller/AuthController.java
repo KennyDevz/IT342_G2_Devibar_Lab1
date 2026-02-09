@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AuthController {
 
     @Autowired
@@ -30,14 +32,19 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-        Optional<User> user = authService.authenticate(
-                loginRequest.getUsername(),
-                loginRequest.getPassword()
-        );
+        try {
+            // Call service to get the token string
+            String token = authService.authenticate(
+                    loginRequest.getUsername(),
+                    loginRequest.getPassword()
+            );
 
-        if (user.isPresent()) {
-            return ResponseEntity.ok(user.get());
-        } else {
+            // Wrap it in a JSON object for the frontend
+            Map<String, String> response = new HashMap<>();
+            response.put("token", token);
+
+            return ResponseEntity.ok(response);
+        } catch (RuntimeException e) {
             return ResponseEntity.status(401).body("Invalid credentials");
         }
     }
