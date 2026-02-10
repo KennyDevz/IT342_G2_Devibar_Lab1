@@ -25,8 +25,10 @@
 - [ ] **Frontend (React)**
   - [x] Initialize React Project (`/web`) (7e8ae69)
   - [x] Setup API Service (Axios/Fetch) (ae0008f)
-  - [ ] Create **Register Page** 
-  - [ ] Create **Login Page**
+      
+  - [x] Create **Register Page** (c26d5c3) 
+  - [x] Create **Login Page** (c26d5c3)
+        
   - [ ] Create **Dashboard & Profile Page** (Protected Route)
   - [ ] Implement **Logout Functionality**
 
