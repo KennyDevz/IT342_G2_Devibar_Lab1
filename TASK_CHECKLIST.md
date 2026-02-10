@@ -1,5 +1,6 @@
 # Lab 2 Task Checklist
 
+## DONE
 - [x] **Project Setup** (d881bfc)
   - [x] Initialize Spring Boot Backend 
   - [x] Create MySQL Database Connection (Port 3309) 
@@ -21,16 +22,16 @@
   - [x] Configure `SecurityConfig` to use JWT Filter
   - [x] Implement `GET /api/user/me` (Protected Endpoint)
 
-## IN-PROGRESS
-- [ ] **Frontend (React)**
+- [x] **Frontend (React)**
   - [x] Initialize React Project (`/web`) (7e8ae69)
   - [x] Setup API Service (Axios/Fetch) (ae0008f)
-      
   - [x] Create **Register Page** (c26d5c3) 
   - [x] Create **Login Page** (c26d5c3)
-        
-  - [ ] Create **Dashboard & Profile Page** (Protected Route)
-  - [ ] Implement **Logout Functionality**
+  - [x] Create **Dashboard & Profile Page** (Protected Route) (ec569ca)
+  - [x] Implement **Logout Functionality** (ec569ca)
+
+## IN-PROGRESS
+
 
 ## TODO
 
