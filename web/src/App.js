@@ -10,6 +10,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
+        {/* Protected Routes */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile/>} />
+
         {/* Default Redirect (If user types a wrong link, go to Login) */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
