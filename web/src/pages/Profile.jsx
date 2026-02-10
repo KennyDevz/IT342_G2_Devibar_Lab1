@@ -3,7 +3,7 @@ import { getCurrentUser } from "../api";
 import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css"; // Import dedicated Profile styles
 
-const Profile = () => {
+export default function Profile(){
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
 
@@ -45,5 +45,3 @@ const Profile = () => {
         </div>
     );
 };
-
-export default Profile;
