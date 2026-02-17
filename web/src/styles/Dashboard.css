@@ -1,153 +1,44 @@
-.dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f2f5;
-    padding: 20px;
-}
+/* src/styles/Dashboard.css */
 
-.dashboard-card {
-    background: white;
+/* Welcome Card (The white box) */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    backdrop-filter: blur(12px); /* Glass effect */
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    max-width: 600px;
     width: 100%;
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+    animation: floatUp 0.8s ease-out; /* Slide up animation */
 }
 
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #f0f2f5;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-.app-title {
+/* Typography */
+.welcome-title {
+    font-size: 3rem;
+    color: #37474f; /* Dark Blue-Grey */
     margin: 0;
-    color: #1877f2;
-    font-size: 1.2rem;
-}
-
-.profile-icon {
-    font-size: 28px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.profile-icon:hover {
-    transform: scale(1.1);
-}
-
-.welcome-text {
-    font-size: 2rem;
-    color: #333;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.sub-text {
-    color: #666;
+.welcome-subtitle {
+    font-size: 1.2rem;
+    color: #78909c; /* Soft Grey-Blue */
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
-.logout-btn {
-    background-color: #ff4d4f;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.logout-btn:hover {
-    background-color: #d9363e;
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.2s ease-in-out;
-}
-
-/* The Modal Box */
-.modal-content {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: scaleUp 0.2s ease-in-out;
-}
-
-.modal-content h3 {
-    margin-top: 0;
-    color: #1c1e21;
-}
-
-.modal-content p {
-    color: #65676b;
-    margin-bottom: 25px;
-}
-
-/* Buttons Container */
-.modal-actions {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* Button Styles */
-.btn-cancel, .btn-confirm {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.btn-cancel {
-    background-color: #e4e6eb;
-    color: #050505;
-}
-
-.btn-cancel:hover {
-    background-color: #d8dadf;
-}
-
-.btn-confirm {
-    background-color: #ff4d4f;
-    color: white;
-}
-
-.btn-confirm:hover {
-    background-color: #d9363e;
+/* Icons (Coffee, Headphones, Leaf) */
+.welcome-icons {
+    margin-top: 20px;
+    font-size: 40px;
+    opacity: 0.8;
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes scaleUp {
-    from { transform: scale(0.9); }
-    to { transform: scale(1); }
+@keyframes floatUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }

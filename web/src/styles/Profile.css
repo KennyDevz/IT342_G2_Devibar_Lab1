@@ -1,92 +1,112 @@
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f2f5; /* Same background for consistency */
-    padding: 20px;
-}
+/* src/styles/Profile.css */
 
+/* Profile Card (The white box) */
 .profile-card {
-    background: white;
-    width: 100%;
-    max-width: 400px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px; /* Slightly narrower than dashboard */
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    animation: scaleIn 0.5s ease-out;
 }
 
-.profile-avatar {
+/* Large Avatar Circle */
+.profile-avatar-large {
     width: 100px;
     height: 100px;
-    background-color: #e4e6eb;
+    background: linear-gradient(135deg, #80cbc4, #4db6ac); /* Teal Gradient */
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
     border-radius: 50%;
-    margin: 0 auto 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 40px;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 20px rgba(77, 182, 172, 0.4); /* Teal glow */
+    border: 4px solid white;
 }
 
+/* Text Headers */
 .profile-header h2 {
+    font-size: 2rem;
+    color: #37474f;
     margin: 0 0 5px 0;
-    color: #1c1e21;
 }
 
 .profile-role {
-    color: #65676b;
-    font-size: 14px;
-    margin-bottom: 25px;
+    color: #90a4ae;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
     display: block;
 }
 
+/* Info Details Box */
 .profile-details {
-    text-align: left;
-    background-color: #f9f9f9;
+    background: rgba(255, 255, 255, 0.6); /* Slightly darker inner box */
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 8px;
+    text-align: left;
     margin-bottom: 25px;
 }
 
 .detail-item {
     margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .detail-item:last-child {
+    border-bottom: none;
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .detail-label {
-    display: block;
-    font-size: 12px;
-    color: #65676b;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+    font-size: 0.9rem;
+    color: #78909c;
+    font-weight: 600;
 }
 
 .detail-value {
-    font-size: 16px;
-    color: #050505;
-    font-weight: 500;
+    font-size: 1rem;
+    color: #455a64;
+    font-weight: 700;
 }
 
-.back-btn {
+/* Back Button */
+.btn-back {
     width: 100%;
-    padding: 12px;
-    background-color: #42b72a; /* Green */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 15px;
+    background-color: white;
+    color: #00897b;
+    border: 2px solid #b2dfdb;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease-in-out;
 }
 
-.back-btn:hover {
-    background-color: #36a420;
+.btn-back:hover {
+    background-color: #e0f2f1;
+    border-color: #80cbc4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 137, 123, 0.1);
+}
+
+/* Card Animation */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
