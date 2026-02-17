@@ -29,14 +29,15 @@
   - [x] Create **Login Page** (c26d5c3)
   - [x] Create **Dashboard & Profile Page** (Protected Route) (ec569ca)
   - [x] Implement **Logout Functionality** (ec569ca)
+     
+- [ ] **Mobile Application**
+  - [x] Project setup and Configuration
 
 ## IN-PROGRESS
+  - [ ] Connection to the same Spring Boot backend
 
 
 ## TODO
-- [ ] **Mobile Application**
-  - [ ] Project setup and Configuration
-  - [ ] Connection to the same Spring Boot backend
   - [ ] Create **Register Screen**
   - [ ] Create **Login Screen**
   - [ ] Create **Dashboard & Profile Screen** (Protected)
