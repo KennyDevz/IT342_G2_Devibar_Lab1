@@ -1,68 +1,70 @@
 import { useState } from "react";
 import { login } from "../api";
 import { useNavigate, Link } from "react-router-dom";
-import "../styles/Auth.css"; // Shared styles
+import "../styles/Auth.css";
 
-export default function Login(){
-    const [formData, setFormData] = useState({ 
-        username: "", 
-        password: "" 
-    });
-    
+const Login = () => {
+    const [formData, setFormData] = useState({ username: "", password: "" });
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await login(formData);
-            
-            // 1. Save the token to browser storage
             localStorage.setItem("token", response.data.token);
-            console.log("Login successful, token saved:", response.data.token);
-            // 2. Redirect to the Dashboard
             navigate("/dashboard");
         } catch (err) {
-            alert("Invalid username or password");
+            alert("Invalid credentials!");
         }
     };
 
     return (
         <div className="auth-container">
-            <div className="auth-card">
-                <h2>Welcome Back</h2>
-                <form onSubmit={handleSubmit} className="auth-form">
-                    <input 
-                        className="auth-input"
-                        name="username" 
-                        placeholder="Username" 
-                        value={formData.username} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <input 
-                        className="auth-input"
-                        name="password" 
-                        type="password" 
-                        placeholder="Password" 
-                        value={formData.password} 
-                        onChange={handleChange} 
-                        required 
-                    />
-                    <button type="submit" className="auth-button">Log In</button>
-                </form>
-                <div className="auth-footer">
-                    Don't have an account? <Link to="/register" className="auth-link">Sign up</Link>
+            {/* LEFT SIDE: Relaxing Image & Branding */}
+            <div className="auth-left">
+                <div className="auth-left-content">
+                    <h1>Mini App</h1>
+                    <p>Relax, organize, and get things done.</p>
+                </div>
+            </div>
+
+            {/* RIGHT SIDE: Login Form */}
+            <div className="auth-right">
+                <div className="auth-form-box">
+                    <h2>Welcome Back</h2>
+                    <span className="sub-text">Please enter your details to sign in.</span>
+                    
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                            className="auth-input"
+                            name="username" 
+                            placeholder="Username" 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <input 
+                            className="auth-input"
+                            name="password" 
+                            type="password" 
+                            placeholder="Password" 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <button type="submit" className="auth-button">Sign In</button>
+                    </form>
+
+                    <div className="auth-footer">
+                        Don't have an account? 
+                        <Link to="/register" className="auth-link">Create one</Link>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
+export default Login;
