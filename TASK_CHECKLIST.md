@@ -34,4 +34,10 @@
 
 
 ## TODO
-
+- [ ] **Mobile Application**
+  - [ ] Project setup and Configuration
+  - [ ] Connection to the same Spring Boot backend
+  - [ ] Create **Register Screen**
+  - [ ] Create **Login Screen**
+  - [ ] Create **Dashboard & Profile Screen** (Protected)
+  - [ ] Implement Logout functionality
