@@ -31,7 +31,7 @@
   - [x] Implement **Logout Functionality** (ec569ca)
      
 - [ ] **Mobile Application**
-  - [x] Project setup and Configuration
+  - [x] Project setup and Configuration (73b89cc)
 
 ## IN-PROGRESS
   - [ ] Connection to the same Spring Boot backend
