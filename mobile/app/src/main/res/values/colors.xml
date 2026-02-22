@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="teal_light">#7DD596</color>
+    <color name="teal_primary">#26a69a</color>
+    <color name="teal_dark">#00897b</color>
+    <color name="bg_gradient_start">#7DD596</color>
+    <color name="bg_gradient_end">#DDF3E1</color>
+
+    <color name="text_dark">#263238</color>
+    <color name="text_grey">#78909c</color>
+    <color name="input_bg">#f7f9fa</color>
+    <color name="input_border">#eceff1</color>
+
+    <color name="white_transparent">#D9FFFFFF</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
