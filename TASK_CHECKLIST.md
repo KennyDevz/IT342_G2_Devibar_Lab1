@@ -33,12 +33,13 @@
 - [ ] **Mobile Application**
   - [x] Project setup and Configuration (73b89cc)
   - [x] Connection to the same Spring Boot backend (468da84)
-
+  - [x] Create **Register Screen** (8688f5d)
+  - [x] Create **Login Screen** (8688f5d)
+        
 ## IN-PROGRESS
-  - [ ] Create **Register Screen**
-  - [ ] Create **Login Screen**
+  - [ ] Create **Dashboard & Profile Screen** 
 
 
 ## TODO
-  - [ ] Create **Dashboard & Profile Screen** 
   - [ ] Implement Logout functionality
+  - [ ] Cross-platform testing
