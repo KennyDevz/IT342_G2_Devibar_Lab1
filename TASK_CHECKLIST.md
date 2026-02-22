@@ -32,13 +32,13 @@
      
 - [ ] **Mobile Application**
   - [x] Project setup and Configuration (73b89cc)
+  - [x] Connection to the same Spring Boot backend (468da84)
 
 ## IN-PROGRESS
-  - [ ] Connection to the same Spring Boot backend
+  - [ ] Create **Register Screen**
+  - [ ] Create **Login Screen**
 
 
 ## TODO
-  - [ ] Create **Register Screen**
-  - [ ] Create **Login Screen**
-  - [ ] Create **Dashboard & Profile Screen** (Protected)
+  - [ ] Create **Dashboard & Profile Screen** 
   - [ ] Implement Logout functionality
