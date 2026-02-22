@@ -35,11 +35,11 @@
   - [x] Connection to the same Spring Boot backend (468da84)
   - [x] Create **Register Screen** (8688f5d)
   - [x] Create **Login Screen** (8688f5d)
+  - [x] Create **Dashboard & Profile Screen** (29f55e1)
         
 ## IN-PROGRESS
-  - [ ] Create **Dashboard & Profile Screen** 
-
-
-## TODO
   - [ ] Implement Logout functionality
   - [ ] Cross-platform testing
+
+## TODO
+  - [ ] Finalize and Update Docs
