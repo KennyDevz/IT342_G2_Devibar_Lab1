@@ -53,6 +53,26 @@ class ProfileActivity : AppCompatActivity() {
             finish()
         }
 
+        //Logout Logic
+        btnLogout.setOnClickListener {
+            lifecycleScope.launch {
+                try {
+                    RetrofitClient.instance.logout()
+                } catch (e: Exception) {
+                    //
+                }
+
+                // 1. Delete the token
+                sharedPreferences.edit().remove("JWT_TOKEN").apply()
+                Toast.makeText(this@ProfileActivity, "Logged out successfully", Toast.LENGTH_SHORT).show()
+
+                // 2. Go to Login AND destroy the backstack (so they can't press back to see the Dashboard)
+                val intent = Intent(this@ProfileActivity, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+        }
 
     }
 }

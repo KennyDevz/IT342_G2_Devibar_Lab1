@@ -24,9 +24,16 @@ public class AuthController {
     public ResponseEntity<?> register(@RequestBody UserDTO userDTO) {
         try {
             authService.registerUser(userDTO);
-            return ResponseEntity.ok("User registered successfully");
+
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "User registered successfully");
+
+            return ResponseEntity.ok(response);
+
         } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("error", e.getMessage());
+            return ResponseEntity.badRequest().body(errorResponse);
         }
     }
 
@@ -47,5 +54,12 @@ public class AuthController {
         } catch (RuntimeException e) {
             return ResponseEntity.status(401).body("Invalid credentials");
         }
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout() {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Logged out successfully");
+        return ResponseEntity.ok(response);
     }
 }
