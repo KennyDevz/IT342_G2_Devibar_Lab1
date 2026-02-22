@@ -38,9 +38,10 @@
   - [x] Create **Dashboard & Profile Screen** (29f55e1)
   - [x] Implement Logout functionality (6c072b5)
   - [x] Cross-platform testing (6c072b5)
-        
+  - [x] Finalize and Update Docs (353cb8d)
+       
 ## IN-PROGRESS
-  - [ ] Finalize and Update Docs
+  
 
 ## TODO
   
