@@ -36,10 +36,11 @@
   - [x] Create **Register Screen** (8688f5d)
   - [x] Create **Login Screen** (8688f5d)
   - [x] Create **Dashboard & Profile Screen** (29f55e1)
+  - [x] Implement Logout functionality (6c072b5)
+  - [x] Cross-platform testing (6c072b5)
         
 ## IN-PROGRESS
-  - [ ] Implement Logout functionality
-  - [ ] Cross-platform testing
+  - [ ] Finalize and Update Docs
 
 ## TODO
-  - [ ] Finalize and Update Docs
+  
